@@ -42,32 +42,28 @@ Une application de galerie de photos Unsplash avec authentification personnalis�
 ## Installation
 
 1. Clonez le dépôt :
-```bash
-git clone <repo_url>
+```
+git clone https://github.com/sunders458/farafinah_galery2.git
 cd farafinah_galery2
 ```
 
 2. Installez les dépendances :
-```bash
+```
 yarn install
 # ou
 npm install
 ```
 
 3. Configurez votre clé API Unsplash :
-   - Créez un compte sur [Unsplash Developer](https://unsplash.com/developers)
-   - Obtenez une clé API (Access Key)
-   - Copiez le fichier `.env` en `.env.local` et remplacez `your_unsplash_key_here` par votre clé API :
-```bash
-cp .env .env.local
-```
+   - Dans `.env` en et remplacez `your_unsplash_key_here` par votre clé API :
+
 ```
 # .env.local
 VUE_APP_UNSPLASH_ACCESS_KEY=votre_clé_ici
 ```
 
 4. Lancez le serveur de développement :
-```bash
+```
 yarn serve
 # ou
 npm run serve
@@ -121,33 +117,15 @@ src/
 - **Likes** : Les likes sont stockés par utilisateur dans IndexedDB via LocalForage
 - **Images** : Chargées depuis l'API Unsplash et mises en cache par le navigateur
 
-### Sécurité
-
-- Bien que cette application utilise un système d'authentification simplifiée pour la démonstration, dans un environnement de production, il faudrait implémenter :
-  - Authentification basée sur JWT ou OAuth
-  - Stockage sécurisé des tokens
-  - Protection CSRF
-  - HTTPS
 
 ## Déploiement
 
 Pour créer une version de production :
 
-```bash
+```
 yarn build
 # ou
 npm run build
 ```
 
-Les fichiers générés seront dans le dossier `dist/` et peuvent être déployés sur n'importe quel hébergement statique (Netlify, Vercel, GitHub Pages, etc.)
-
-## Améliorations futures
-
-- Ajout de filtres pour la recherche d'images
-- Système de collections d'images favorites
-- Mode sombre
-- Partage sur les réseaux sociaux
-
-## Auteur
-
-Créé pour Farafinah Gallery - Test technique.
+Les fichiers générés seront dans le dossier `dist/` et peuvent être déployés sur n'importe quel hébergement statique
